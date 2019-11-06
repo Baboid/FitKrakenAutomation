@@ -4,6 +4,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import io.codearte.jfairy.Fairy;
+import io.codearte.jfairy.producer.person.Person;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -39,5 +42,25 @@ public class Base {
 		return driver;
 
 	}
+
+	public String createNewMemberName() {
+		Fairy fairy = Fairy.create();
+		Person person = fairy.person();
+
+		return person.firstName();
+
+	}
+
+
+	public CharSequence createUniqueEmail() {
+		Fairy fairy = Fairy.create();
+		Person person = fairy.person();
+//
+//		CharSequence uniqueEmail = new StringBuffer(person.firstName() + "@getnada.com");
+//		return uniqueEmail;
+		return person.firstName() + "@getnada.com";
+	}
+
+
 
 }

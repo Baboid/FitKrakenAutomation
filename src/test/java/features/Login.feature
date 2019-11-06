@@ -1,4 +1,4 @@
-Feature: Application login
+Feature: User login
 
 Scenario: A valid user attempts to login
 Given the user is on the login page

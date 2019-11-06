@@ -14,7 +14,7 @@ public class LoginSteps extends Base {
 	
 	LoginPage lp;
 	MembersPage mp;
-
+	
 	@Given("^the user is on the login page$")
 	public void the_user_is_on_the_login_page() throws IOException {
 		driver = initilizeDriver();
@@ -31,7 +31,7 @@ public class LoginSteps extends Base {
 	@And("^clicks on the login button$")
 	public void clicks_on_the_login_button() {
 		lp = new LoginPage(driver);
-		lp.clickLogin().click();
+		lp.getLoginButton().click();
 	}
 
 	@Then("^the user should be presented with the members page$")
